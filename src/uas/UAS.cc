@@ -334,6 +334,12 @@ void UAS::receiveMessage(mavlink_message_t message)
         }
             break;
 
+        case MAVLINK_MSG_ID_GAS_SENSOR_VALUE:
+        {
+            mavlink_gas_sensor_value_t gas_value;
+            mavlink_msg_gas_sensor_value_decode(&message, &gas_value);
+        }
+
         case MAVLINK_MSG_ID_DATA_TRANSMISSION_HANDSHAKE:
         {
             mavlink_data_transmission_handshake_t p;
