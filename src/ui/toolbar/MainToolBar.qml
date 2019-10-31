@@ -134,6 +134,13 @@ Rectangle {
                 visible:            !ScreenTools.isMobile && QGroundControl.corePlugin.showAdvancedUI
                 onClicked:          toolBar.showAnalyzeView()
             }
+            QGCToolBarButton {
+                id:                 reportButton
+                anchors.top:        parent.top
+                anchors.bottom:     parent.bottom
+                exclusiveGroup:     mainActionGroup
+                source:             "/qmlimages/report.svg"
+            }
 
             Rectangle {
                 anchors.margins:    ScreenTools.defaultFontPixelHeight / 2
